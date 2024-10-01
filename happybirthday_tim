@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Timmy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #add8e6; /* Pastellblauer Hintergrund */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 5em;
+            color: #ff69b4;
+            text-shadow: 3px 3px #ff1493;
+            position: relative;
+            z-index: 1; /* Damit der Text vor den Herzen erscheint */
+        }
+
+        /* Ballons Styling */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 80px;
+            height: 120px;
+            background-color: #ffcc00;
+            border-radius: 50% 50% 50% 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .balloon:nth-child(2) {
+            left: 20%;
+            background-color: #ff69b4;
+            animation-delay: 2s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 40%;
+            background-color: #00ccff;
+            animation-delay: 4s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 60%;
+            background-color: #32cd32;
+            animation-delay: 6s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 80%;
+            background-color: #ff4500;
+            animation-delay: 8s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-300px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Herzen Styling */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            transform: rotate(45deg);
+            animation: floatHearts 8s linear infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff1493;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes floatHearts {
+            0% {
+                transform: translateY(100vh) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Mehr Herzen Positionen und unterschiedliche Animationsgeschwindigkeiten */
+        .heart:nth-child(6) {
+            left: 10%;
+            animation-duration: 6s;
+        }
+
+        .heart:nth-child(7) {
+            left: 20%;
+            animation-duration: 7s;
+        }
+
+        .heart:nth-child(8) {
+            left: 30%;
+            animation-duration: 6.5s;
+        }
+
+        .heart:nth-child(9) {
+            left: 40%;
+            animation-duration: 8s;
+        }
+
+        .heart:nth-child(10) {
+            left: 50%;
+            animation-duration: 7.5s;
+        }
+
+        .heart:nth-child(11) {
+            left: 60%;
+            animation-duration: 6s;
+        }
+
+        .heart:nth-child(12) {
+            left: 70%;
+            animation-duration: 7s;
+        }
+
+        .heart:nth-child(13) {
+            left: 80%;
+            animation-duration: 6.5s;
+        }
+
+        .heart:nth-child(14) {
+            left: 90%;
+            animation-duration: 8s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday Timmy!</h1>
+
+    <!-- Ballons -->
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <!-- Mehr Herzen -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+</body>
+</html>
